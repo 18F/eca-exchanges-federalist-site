@@ -48,6 +48,9 @@ testimonials:
     location: USA
     testimonial: "Through the TechGirls experience, I was able to expand my knowledge of fields like cybersecurity and Java game development. TechGirls opened my eyes to STEM education in other countries."
 
+# The URL of this page
+path: /techgirls/
+
 # Name of the template this page uses to render itself
 layout: post
 ---

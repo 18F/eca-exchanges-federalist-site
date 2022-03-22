@@ -129,9 +129,12 @@ searchgov:
 ##########################################################################################
 
 collections:
-  pages:
+   pages:
     output: true
     permalink: /:path/
+   programs:
+    output: true
+    permalink: /programs/:path/
 
 permalink: pretty
 
