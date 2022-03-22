@@ -12,17 +12,27 @@ publish_mode: editorial_workflow
 logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
 
 collections:
-  - label: Posts
-    name: posts
-    folder: _posts/
+  - label: Programs
+    name: programs
+    folder: _programs/
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'post'}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Image", name: "image", widget: "string"}
+      - {label: "Image alt text", name: "image-alt-text", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Program types", name: "program-types", widget: "list"}
+      - {label: "Program length", name: "program-length", widget: "string"}
+      - {label: "Dates", name: "dates", widget: "string"}
+      - {label: "Cost", name: "cost", widget: "string"}
+      - {label: "Visa requirement", name: "visa-requirement", widget: "string"}
+      - {label: "Participants", name: "participants", widget: "string"}
+      - {label: "Application deadline", name: "application-deadline", widget: "string"}
       - {
           label: "Publish Date",
           name: "date",
