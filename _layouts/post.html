@@ -9,14 +9,49 @@ This is used in blog posts. The index page can be found at blog/index.html
 <div class="usa-layout-docs usa-section">
   <div class="grid-container">
     <div class="grid-row grid-gap">
-      <div class="usa-layout-docs__main desktop:grid-col-9 usa-prose">
+      {% if page.image %} {% asset "{{ page.image }}"
+          class="tablet:float-left tablet:width-1/3 padding-right-3
+          padding-top-1 margin-bottom-3" style="width:100%;" alt="{{ page.image-alt-text }}" %}
+      {% endif %} 
+    </div>
+    <div class="grid-row grid-gap">
+      <div class="desktop:grid-col-8 usa-prose">
         <h1 class="title">{{page.title}}</h1>
-        <div class="text-base margin-bottom-2">
-          <div class="margin-top-neg-105">
-            By <span class="text-bold">{{ page.author }}</span> · {{ page.date | date: '%B %d, %Y' }}
-          </div>
-        </div>
         {{ content }}
+        <a href={{page.learn-more-link}}>Learn more about this program.</a>
+      </div>
+      <aside class="desktop:grid-col-4 margin-top-6 bg-base-lightest">
+        <h2>Program overview</h2>
+        <ul class="usa-list usa-list--unstyled">
+          <li><strong>Location:</strong> {{page.location}}</li>
+          <li><strong>Program type:</strong> {% for type in page.program-types %}<span class="usa-tag">{{type}}</span> {% endfor %}</li>
+          <li><strong>Program length:</strong> {{page.program-length}}</li>
+          <li><strong>Dates:</strong> {{page.dates}}</li>
+          <li><strong>Cost:</strong> {{page.cost}}</li>
+          <li><strong>Visa requirement:</strong> {{page.visa-requirement}}</li>
+          <li><strong>Participants:</strong> {{page.participants}}</li>
+          <li><strong>Application deadline:</strong> {{page.application-deadline}}</li>
+        </ul>
+        <a class="usa-button margin-top-4 width-full" href="apply-link">Apply</a>
+      </aside>
+    </div>
+    <div class="usa-section grid-row grid-gap margin-bottom-0">
+      <div class="grid-col-12 bg-base-lightest padding-bottom-6 padding-left-6">
+        <h2>Eligibility criteria</h2>
+        <ul class="usa-list usa-list-unstyled">
+        {% for criterion in page.eligibility-criteria %}
+          <li>{{criterion.text}}</li>
+        {% endfor %}
+        </ul>
+        <a class="usa-button usa-button-big margin-top-4" href="apply-link">Apply</a>
+      </div>
+    </div>
+    <div class="usa-section usa-section--dark grid-row grid-gap">
+      <div class="grid-col-12">
+      {% for testimonial in page.testimonials %}
+        <p class="font-body-lg">{{testimonial.testimonial}}</p>
+        <p><strong>{{testimonial.name}}, {{testimonial.location}}</strong></p>
+      {% endfor %}
       </div>
     </div>
   </div>
