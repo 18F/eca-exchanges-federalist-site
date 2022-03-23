@@ -18,13 +18,14 @@ collections:
     create: true
     slug: "{{slug}}"
     editor:
-      preview: true
+      preview: false
     fields:
       - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'post'}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Image", name: "image", widget: "string"}
+      - {label: "Program name", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string", hint: "This will show as a description of the program on pages that list multiple programs (for instance, on search results pages)"}
+      - {label: "Image", name: "image", widget: "string", hint: "Optional but recommended: if there's an image that accompanies this program, put it here. It will render as a banner image on the program page and a thumbnail on the search results page."}
       - {label: "Image alt text", name: "image-alt-text", widget: "string"}
+      - {label: "Program description", name: "body", widget: "markdown"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Program types", name: "program-types", widget: "list"}
       - {label: "Program length", name: "program-length", widget: "string"}
@@ -38,8 +39,20 @@ collections:
          widget: "list",
          summary: "{{fields.text}}",
          fields: [{
-           - label: "Text", name: "text", widget: "string"
+           - label: "Text", name: "text", widget: "markdown"
          }]
         }
+      - {label: "Additional info", name: "additional-info", widget: "string", hint: "Optional; if there's any information not already covered elsewhere, put it here."}
+      - {label: "Link to learn more", name: "learn-more-link", widget: "string"}
+      - {label: "Link to apply", name: "apply-link", widget: "string"}
+      - {label: "Testimonials",
+         name: "testimonials",
+         widget: "list",
+         summary: "{{fields.name}}'s testimonial"
+         fields: [
+           {label: "Name", name: "name", widget: "string"},
+           {label: "Location", name: "location", widget: "string"},
+           {label: "Participant's testimonial", name: "testimonial", widget: "markdown"}
+         ]}
+      - {label: "Page path", name: "path", widget: "string", hint: "The part of the URL that represents the program page. For the TechGirls program, this would be /techgirls/, slashes included."}
 
-      - {label: "Body", name: "body", widget: "markdown"}
