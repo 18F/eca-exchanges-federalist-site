@@ -33,12 +33,18 @@ collections:
       - {label: "Visa requirement", name: "visa-requirement", widget: "string"}
       - {label: "Participants", name: "participants", widget: "string"}
       - {label: "Application deadline", name: "application-deadline", widget: "string"}
-      - {
-          label: "Publish Date",
-          name: "date",
-          widget: "datetime",
-          format: 'MMMM D, YYYY',
-          dateFormat: 'MMMM D, YYYY',
-          timeFormat: false
+      - {label: "Eligibility criteria",
+         name: "eligibility-criteria",
+         widget: "list",
+         summary: "{{fields.text}}",
+         fields: {
+           - label: "Text", name: "text", widget: "string"
+         }
         }
+      - {label: "", name: "", widget: "string"}
+      - {label: "", name: "", widget: "string"}
+      - {label: "", name: "", widget: "string"}
+      - {label: "", name: "", widget: "string"}
+      - {label: "", name: "", widget: "string"}
+      - {label: "", name: "", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
