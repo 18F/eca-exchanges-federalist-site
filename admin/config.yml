@@ -37,14 +37,9 @@ collections:
          name: "eligibility-criteria",
          widget: "list",
          summary: "{{fields.text}}",
-         fields: {
+         fields: [{
            - label: "Text", name: "text", widget: "string"
-         }
+         }]
         }
-      - {label: "", name: "", widget: "string"}
-      - {label: "", name: "", widget: "string"}
-      - {label: "", name: "", widget: "string"}
-      - {label: "", name: "", widget: "string"}
-      - {label: "", name: "", widget: "string"}
-      - {label: "", name: "", widget: "string"}
+
       - {label: "Body", name: "body", widget: "markdown"}
