@@ -12,6 +12,19 @@ publish_mode: editorial_workflow
 logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
 
 collections:
+  - label: Events
+    name: events
+    files: 
+      - label: "Test"
+        name: "test"
+        file: "_data/test.yml"
+        fields:
+          - label: "Test"
+            name: "items"
+            widget: "list"
+            fields: [
+              {label: "name", name: "name", widget: "string"}
+            ]
   - label: Programs
     name: programs
     folder: _programs/
@@ -56,3 +69,18 @@ collections:
          ]}
       - {label: "Page path", name: "path", widget: "string", hint: "The part of the URL that represents the program page. For the TechGirls program, this would be /techgirls/, slashes included."}
 
+      # - label: "Events"
+      #   name: "events"
+      #   file: "_data/events.yaml"
+      #   fields:
+      #     - label: "Events"
+      #       name: "items"
+      #       widget: "list"
+      #       fields: [
+      #         {label: "Event name", name: "name", widget: "string"},
+      #         {label: "Event description", name: "description", widget: "markdown"},
+      #         {label: "Date", name: "date", widget: "datetime"},
+      #         {label: "Time in IST", name: "time", widget: "string"},
+      #         {label: "Type of event", name: "event-type", widget: "string"},
+      #         {label: "Link to register", name: "learn-more-link", widget: "string"}
+      #       ]
