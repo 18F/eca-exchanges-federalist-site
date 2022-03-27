@@ -10,7 +10,7 @@ layout: default
         <ul class="usa-list usa-list--unstyled">
           {% for item in site.data[page.datafile] %}
           <li class="border-bottom border-gray-30 margin-top-4 padding-bottom-4">
-            <p class="text-base margin-bottom-1">{{item.date}}, {{item.time}}</p>
+            <p class="text-base margin-bottom-1">{{item.date}}</p>
             <h2 class="margin-top-0"><a href="{{ item.register-link }}"><b>{{ item.name }}</b></a></h2>
             <p>{{item.description}}</p>
             <p><a class="usa-button" href={{item.register-link}}>Register for this event</a></p>
