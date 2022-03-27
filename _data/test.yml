@@ -1,3 +1,5 @@
 items:
   - name: "An item"
+    description: "item description"
   - name: Another item
+    description: "item description"
