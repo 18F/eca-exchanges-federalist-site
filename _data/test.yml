@@ -1,5 +1,19 @@
 items:
-  - name: "An item"
-    description: "item description"
-  - name: Another item
-    description: "item description"
+  - name: 'Field of Study: Data Science and Women in Data Science'
+    description: 'EducationUSA Chennai invites you to a webinar, Field of Study: Data Science and Women in Data Science, on Tuesday, March 22, 2022, 6:30 - 7:30 p.m. IST. This session is part of our field of study webinar series and commemorates Women’s History Month. Data Science is the pivotal field of this information age and the most sought after. Are you keen to learn the power of data science and the contributions made by women in this field? Join us on Tuesday, March 22, 6:30 – 7:30 p.m. IST to meet Dr. Durga Suresh-Menon, Dean, School of Computing and Data Science, Wentworth Institute of Technology who will provide an overview of Data Science and contributions made by women in this field.'
+    date: March 22, 2022
+    time: 6:30-7:30pm IST
+    event-type: 'Online Event'
+    register-link: https://bit.ly/EdUSAChennai_FOS
+  - name: 'Facebook Live session in collaboration with American Center, New Delhi'
+    description: 'Topic: Get Set, Go! Gear up for the next U.S. University Intake. Have you started planning Fall 2023 U.S. admissions yet? If not, then hear from an EducationUSA adviser on how to begin your higher education journey in the U.S. and learn about the step-by-step process and secret tips for creating a solid college application for U.S. universities. The session will be live-streamed on the EducationUSA India https://bit.ly/EdUSAFB and American Center New Delhi https://bit.ly/ACNDFB Facebook pages. So, join us on Wednesday, March 23 from 4-5 pm IST and use the link to register https://bit.ly/EdUSACND For undergraduate and graduate students and parents.'
+    date: March 23, 2022
+    time: 4:00 pm–5:00 pm IST
+    event-type: 'Online Event'
+    register-link: https://bit.ly/EdUSACND
+  - name: 'Study Your Undergraduate Degree in the US'
+    description: 'Learn all the information to start the search to study an undergraduate program in the United States, such as requirements, procedures, scholarships, etc. You can participate from any computer or mobile device with internet.'
+    date: March 24, 2022
+    time: 11:30 am–12:30 pm IST
+    event-type: 'Online Event'
+    register-link: http://bit.ly/EdUSA-AskAnAdviser

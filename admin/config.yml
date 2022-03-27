@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: 18f/eca-exchanges-federalist-site
+  branch: hjb/add-netlify
   base_url: https://federalistapp.18f.gov
   auth_endpoint: external/auth/github
   preview_context: federalist/build
@@ -23,11 +24,23 @@ collections:
             name: "items"
             widget: "list"
             fields: 
-              - label: "Name"
+              - label: "Event title"
                 name: "name"
                 widget: "string"
-              - label: "Description"
+              - label: "Event description"
                 name: "description"
+                widget: "string"
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+              - label: "Time in IST"
+                name: "time"
+                widget: "string"
+              - label: "Type of event"
+                name: "event-type"
+                widget: "string"
+              - label: "Link to register for the event"
+                name: "register-link"
                 widget: "string"
   - label: Programs
     name: programs
