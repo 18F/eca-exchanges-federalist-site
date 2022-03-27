@@ -1,11 +1,10 @@
 backend:
   name: github
   repo: 18f/eca-exchanges-federalist-site
-  branch: hjb/add-netlify
+  branch: main
   base_url: https://federalistapp.18f.gov
   auth_endpoint: external/auth/github
   preview_context: federalist/build
-  branch: main
 
 media_folder: assets/uploads
 public_folder: /images/uploads
@@ -16,13 +15,16 @@ collections:
   - label: Events
     name: events
     files: 
-      - label: "Test"
-        name: "test"
-        file: "_data/test.yml"
+      - label: "Events"
+        name: "events"
+        editor:
+          preview: false
+        file: "_data/events.yaml"
         fields:
-          - label: "Test"
+          - label: "Events"
             name: "items"
             widget: "list"
+            summary: "{{fields.name}} - {{fields.date}}"
             fields: 
               - label: "Event title"
                 name: "name"
