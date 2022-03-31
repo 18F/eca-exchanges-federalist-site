@@ -1,3 +1,37 @@
+## ECA Exchanges - Prototype Jekyll Site
+
+This repository contains the code needed to build a working Jekyll site on Federalist (the static site hosting part of Cloud.gov). Though ECA may not use Federalist/Cloud.gov, the assets in this repo are still usable for a Jekyll site.
+
+This Jekyll project's theme is also based on the [US Web Design System](https://designsystem.digital.gov/).
+
+**YAML Data Files**
+
+The `_data` directory presently contains just `events.yaml`, a file to store data for events. Jekyll can take advantage of sorting by dates and filtering by past, present, or future dates. With that, you can use one file for all events and just keep adding to it, even if events are in the past.
+
+We recommend also using this for program data, among any other types of data that are best to keep in one centralized location, then use Jekyll's templates to propogate that data everywhere.
+
+** Other Directories **
+
+* `_assets` - Stores CSS files, images, or any other file that doesn't need to be generated
+* `_drafts` - Stores drafts of pages or posts. Jekyll will ignore this directory when building the site.
+* `_includes` - Stores portions of pages that are included in others. Headers, footers, any custom modules, etc.
+* `_layouts` - Stores theming templates for posts, pages, or other content types
+* `_pages` - Stores content for posts, pages, or other types
+* `_programs` - Stores content for programs
+* `admin` - Stores files related to Netlify CMS, which provides a UI to edit the pages. (Add `/admin` to any URL to enter it)
+
+The other directories are a bit more self-explanatory. But Jekyll will attempt to process any file or directory not in the ignore section of `_config.yml`.
+
+** Docker **
+
+A `Dockerfile` and `docker-compose.yml` are provided so you can run the site in a container. See the "Running the application" section and "With Docker" subsection below.
+
+---
+
+Below this is the original README from the Federalist/cloud.gov deployment system. We're leaving it intact in case you're curious how it works.
+
+---
+
 <!--
   Federalist recommends you use Continuous Integration to automatically test
   and validate any new changes to your site. CircleCI is free for open source
